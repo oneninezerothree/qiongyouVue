@@ -1,11 +1,5 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <router-view></router-view>
 </template>
 
 <style lang="scss">
@@ -26,4 +20,14 @@
     }
   }
 }
+ul li{
+  list-style: none ;
+}
+*{
+  margin: 0;
+  padding:0;
+}body{
+background-color:rgb(245, 245, 245);
+}
+
 </style>

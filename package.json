@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "element-ui": "^2.9.1",
+    "layui": "^0.0.1"
+  }
+}
