@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Qfoot/>
+
     <router-view/>
   </div>
 </template>
@@ -8,13 +9,16 @@
 
 
 <script lang="ts">
-import "../node_modules/amazeui/dist/css/amazeui.css";
-import jquery from "jquery";
+// import "./amazecss/amazeui.min.css";
+// import jquery from "jquery";
 import { Component, Vue } from "vue-property-decorator";
 import Qfoot from "@/components/Qfoot.vue";
 @Component({
   components: {
     Qfoot
+  },
+  mounted() {
+    // console.log(jquery);
   }
 })
 export default class Home extends Vue {}
