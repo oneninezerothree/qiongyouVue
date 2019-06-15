@@ -63,7 +63,6 @@
 </template>
 <script>
 import Vue from "vue";
-import request from "../request.js/axios";
 // import axios from 'axios'
 export default {
   data() {
@@ -101,9 +100,17 @@ export default {
         var tiaojian = this.shuzhu.every(function(item){
             return item =1;
         });
-        if(tiaojian) {
-            var store =[{phonenum:this.passwordnum},{passwordnum:this.passwordnum}];
-            console.log(store)
+        if(tiaojian && this.shuzhu.length==2) {
+            var store =[{phonenum:this.phone},{passwordnum:this.passwordnum}];
+            var d = JSON.stringify(store)//转字符串
+            localStorage.setItem("name",d);//存到本地
+            var josn = localStorage.getItem("name");//读取本地数据
+            var josnobj = JSON.parse(josn)
+            alert("登录成功")
+            console.log(d)
+            this.$router.push('/home')
+        }else{
+            alert("请完善信息")
         }
     }
   }
