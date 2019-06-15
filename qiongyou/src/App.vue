@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <Qfoot/>
-
     <router-view/>
+    <Qfoot/>
   </div>
 </template>
 
@@ -42,4 +41,14 @@ export default class Home extends Vue {}
     }
   }
 }
+ul li{
+  list-style: none ;
+}
+*{
+  margin: 0;
+  padding:0;
+}body{
+background-color:rgb(245, 245, 245);
+}
+
 </style>

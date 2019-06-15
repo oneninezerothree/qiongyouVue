@@ -9,7 +9,7 @@
     </div>
     <p class="uFace">
       <img
-        src="https://pic.qyer.com/avatar/011/63/41/80/48"
+        src="../../assets/touxian.jpg"
         width="64"
         height="64"
         alt="user_PepO0MOA3I"

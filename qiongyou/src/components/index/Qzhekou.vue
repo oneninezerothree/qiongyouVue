@@ -13,7 +13,7 @@
               <div class="pic">
                 <img
                   width="100%"
-                  src="https://pic.qyer.com/public/picstock/2014/09/12/14105184165870/300x200"
+                  src="../../assets/14105184165870.jpg"
                   lazy="loaded"
                 >
               </div>
@@ -28,7 +28,7 @@
               <div class="pic">
                 <img
                   width="100%"
-                  src="https://pic.qyer.com/public/picstock/2014/09/12/14105184165870/300x200"
+                  src="../../assets/14105184165870.jpg"
                   lazy="loaded"
                 >
               </div>
@@ -43,7 +43,7 @@
               <div class="pic">
                 <img
                   width="100%"
-                  src="https://pic.qyer.com/public/picstock/2014/09/12/14105184165870/300x200"
+                  src="../../assets/14105184165870.jpg"
                   lazy="loaded"
                 >
               </div>

@@ -20,7 +20,7 @@ export default Vue.extend({
         {
           name: "中国",
           urls:
-            "https://pic.qyer.com/album/user/625/98/R0tQSxIOYg/index/320x180"
+            "/img/assets/q2.jpg"
         },
         {
           name: "日本",

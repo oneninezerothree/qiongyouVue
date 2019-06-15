@@ -4,13 +4,13 @@
       <div class="logo">
         <img src="../../../public/img/logo/logo.svg">
       </div>
-      <div data-bn-ipg="index-search" class="search-box">
+      <div data-bn-ipg="index-search" class="search-box" @click="go">
         <i class="search-icon"></i>
         <span>搜索目的地、游记攻略等</span>
       </div>
       <div data-bn-ipg="index-user" class="user-info">
-        <a href="//m.qyer.com/u/11634180">
-          <img src="https://pic.qyer.com/avatar/011/63/41/80/200?v=" onerror class="avatar">
+        <a href="javascript:void(0)">
+          <img src="../../assets/touxian.jpg" onerror class="avatar">
           <i class="q-notice"></i>
         </a>
       </div>
@@ -19,7 +19,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods:{
+    go(){
+      this.$router.push('/Seek');
+    }
+  }
+};
 </script>
 
 
