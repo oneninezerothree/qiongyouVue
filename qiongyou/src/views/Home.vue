@@ -1,18 +1,40 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+    <Qindextop/>
+    <Qlunbo/>
+    <Qnav/>
+    <Qzhekou/>
+    <Qjingxuan/>
+    <Qlist/>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
+import "../../node_modules/amazeui/dist/css/amazeui.css";
+import jquery from "jquery";
+import "../../node_modules/amazeui/dist/js/amazeui.min.js";
+import { Component, Vue } from "vue-property-decorator";
+import Qindextop from "@/components/index/Qindextop.vue"; // @ is an alias to /src
+import Qlunbo from "@/components/index/Qlunbo.vue";
+import Qnav from "@/components/index/Qnav.vue";
+import Qzhekou from "@/components/index/Qzhekou.vue";
+import Qjingxuan from "@/components/index/Qjingxuan.vue";
+import Qlist from "@/components/index/Qlist.vue";
 @Component({
   components: {
-    HelloWorld,
+    Qindextop,
+    Qlunbo,
+    Qnav,
+    Qzhekou,
+    Qjingxuan,
+    Qlist
   },
+  created() {
+    this.$store.state.aphts = this.$route.path;
+    this.$store.state.isFooter = 1;
+  }
 })
 export default class Home extends Vue {}
 </script>
+
