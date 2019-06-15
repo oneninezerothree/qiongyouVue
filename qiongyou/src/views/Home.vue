@@ -11,9 +11,9 @@
 </template>
 
 <script lang="ts">
-import "../../node_modules/amazeui/dist/css/amazeui.css";
-import jquery from "jquery";
-import "../../node_modules/amazeui/dist/js/amazeui.min.js";
+// import "../mycss/amazeui.css";
+// import "../amazejs/amazeui.min.js";
+
 import { Component, Vue } from "vue-property-decorator";
 import Qindextop from "@/components/index/Qindextop.vue"; // @ is an alias to /src
 import Qlunbo from "@/components/index/Qlunbo.vue";
@@ -38,3 +38,9 @@ import Qlist from "@/components/index/Qlist.vue";
 export default class Home extends Vue {}
 </script>
 
+
+
+<style >
+/* @import "../mycss/amazeui.min.css"; */
+/* @import url(../mycss/a.css); */
+</style>
