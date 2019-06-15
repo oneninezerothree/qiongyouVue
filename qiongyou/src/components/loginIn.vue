@@ -66,16 +66,19 @@
             <!---->
           </div>
         </div>
+        
         <span class="lorrTip" data-v-1cee10f7>未注册手机号验证后自动创建</span>
         <div class="login_box" data-v-1cee10f7>
           <div data-bn-ipg="m-pp-nextlogin" class="submit_login" data-v-1cee10f7>下一步</div>
           <div class="login_change" data-v-1cee10f7>
             <div data-v-1cee10f7>
+              <router-link to='/singin'>
               <span
                 data-bn-ipg="m-pp-change-passwordlogin"
                 class="swichChange"
                 data-v-1cee10f7
               >帐号密码登录</span>
+              </router-link>
             </div>
             <span data-bn-ipg="m-pp-quick-needhelp" data-v-1cee10f7>需要帮助？</span>
           </div>
@@ -85,8 +88,63 @@
   </div>
 </template>
 <script>
+import Vue from "vue";
+import request from "../request.js/axios";
+// import axios from 'axios'
 export default {
+data() {
+return {
+username: "",
+password: ""
+};
+},
+methods: {
+gaibian() {
+},
+async login() {
+const { g } = request;
+let objs = {
+key: "00d91e8e0cca2b76f515926a36db68f5",
+phone: this.username,
+passwd: this.password
+};
+console.log(this.username, this.password);
+const data = await g({
+url: "https://www.apiopen.top/login?",
+params: objs
+});
+
+console.log(data);
+if (data.data.code == 200) {
+console.log(this.username == objs.phone);
+this.$router.push("/");
+this.isko = false;
+} else {
+this.isko = true;
 }
+},
+async login2() {
+const { g } = request;
+let objs = {
+key: "00d91e8e0cca2b76f515926a36db68f5",
+phone: this.username,
+passwd: this.password
+};
+const data = await g({
+url: "https://www.apiopen.top/createUser?",
+params: objs
+});
+console.log(data);
+if (data.data.code == 202) {
+// this.isko = false;
+alert('账号错误');
+} else {
+// this.isko = true;
+alert('注册成功');
+}
+}
+}
+};
 </script>
 
 <style lang="scss" scoped>
