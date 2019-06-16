@@ -1,5 +1,5 @@
 {
-  "name": "qiongli",
+  "name": "qiongyou",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,11 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "amazeui": "^2.7.2",
+    "axios": "^0.19.0",
     "core-js": "^2.6.5",
+    "element-ui": "^2.9.1",
+    "jquery": "^3.4.1",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
@@ -29,23 +33,9 @@
     "@vue/cli-service": "^3.8.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "chai": "^4.1.2",
-    "lint-staged": "^8.1.5",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.6.10"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.ts": [
-      "vue-cli-service lint",
-      "git add"
-    ],
-    "*.vue": [
-      "vue-cli-service lint",
-      "git add"
-    ]
   }
 }
