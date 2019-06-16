@@ -1,10 +1,10 @@
 <template>
   <div>
     <section>
-      <section class="commodityBar clearfix">
+      <section class="commodityBar clearfix" v-for="(s,index) in this.$store.state.goods" :key="index">
         <div class="commodityImgBar clearfix">
           <img
-            src="../assets/14105184165870.jpg"
+            :src="s.oneUrl"
             width="100%"
             height="auto"
             title="上海/宁波直飞日本东京/名古屋/大阪/佐贺5-7天往返含税机票+赠送Suica西瓜卡"
@@ -27,7 +27,7 @@
         </div>
         <div id="toProduct"></div>
         <h1 id="product_title" class="tit">
-          <a name="product">上海/宁波直飞日本东京/名古屋/大阪/佐贺5-7天往返含税机票+赠送Suica西瓜卡</a>
+          <a name="product">{{s.title}}</a>
         </h1>
         <div class="pInfo">
           <div class="price">
@@ -124,6 +124,43 @@
     </section>
   </div>
 </template>
+<script>
+import store from '../store';
+import request from '../request';
+export default {
+   created(){
+      this.init();
+  },
+  data(){
+    return{
+       shops: []
+    }
+  },
+  methods:{
+    async init(){
+      const { g } = request;
+      const data = await g({
+        url:
+          "https://www.easy-mock.com/mock/5cf5c000596281437b1396c5/example/qiongyoup"
+      });
+      console.log(data);
+      
+      this.shops = [...data.data.repulic];
+       this.shops.forEach(item => {
+        //  console.log(item.id)
+        if (item.id == this.$route.query.id) {
+          console.log(item)
+         store.commit(
+           'getgoods',
+           item
+         )
+        }
+      });
+    }
+  }   
+}
+</script>
+
 <style lang="scss" scoped>
 .commodityBar {
     margin-bottom: 12.500px;

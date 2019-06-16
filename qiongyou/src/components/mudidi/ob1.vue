@@ -24,12 +24,12 @@ export default Vue.extend({
         },
         {
           name: "日本",
-          urls: "https://pic.qyer.com/album/123/c8/1866577/index/320x180"
+          urls: "/img/assets/q7.jpg"
         },
         {
           name: "泰国",
           urls:
-            "https://pic.qyer.com/album/user/2584/28/Q0xdRhgPaU0/index/320x180"
+            "/img/assets/q5.jpg"
         }
       ]
     };

@@ -20,16 +20,16 @@ export default Vue.extend({
         {
           name: "美国",
           urls:
-            "https://pic.qyer.com/album/user/2269/74/Q0tTSx0DZE0/index/320x180"
+            "/img/assets/o10.jpg"
         },
         {
           name: "加拿大",
           urls:
-            "https://pic.qyer.com/album/user/2579/13/Q0xSSxsEY0A/index/320x180"
+            "/img/assets/o11.jpg"
         },
         {
           name: "墨西哥",
-          urls: "https://pic.qyer.com/album/user/323/5/QktWQh8DaQ/index/320x180"
+          urls: "/img/assets/o12.jpg"
         }
       ]
     };

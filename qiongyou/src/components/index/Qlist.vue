@@ -13,7 +13,7 @@
             class="vue-waterfall-slot item-move"
             data-v-17fc95ea
             v-for="(ind,index) in shopList"
-            :key="index"
+            :key="index" @click="ids(index)" :title="ind.id" ref="div"
           >
             <a
               href="###"
@@ -26,8 +26,7 @@
                 <img
                   alt="【💰热门血拼地大盘点！🛍️伦敦购物地图🛍️】 作为英国时尚首府，伦敦的购物场所、"
                   data-v-ab4551c4
-                  :src="ind.oneUrl"
-                  lazy="loaded"
+                  :src="ind.oneUrl"                
                 >
               </aside>
               <main class="content-box" data-v-ab4551c4>
@@ -58,13 +57,15 @@
 <script>
 import Vue from "vue";
 import requery from "../../lib/requer";
+import store from "e:/sanjieduan/QionYou/qiongyou/src/store";
 export default Vue.extend({
   data() {
     return {
       shopList: [],
       timer: null,
       offsetHeight: 0,
-      isflas: 0
+      isflas: 0,
+      showLoader: false
     };
   },  
   created() {
@@ -83,7 +84,26 @@ export default Vue.extend({
       });
 
       this.shopList = [...data.data.repulic];
+      store.state.shows =[...data.data.repulic];
       console.log(this.shopList);
+    },
+    ids(indexs) {
+            // console.log(ind.id)
+      const loading = this.$loading({
+        lock: true,
+        text: "加载中....",
+        spinner: "el-icon-loading",
+        background: "rgba(0, 0, 0, 0.7)",
+        target: document.querySelector(".loadings")
+      });
+      setTimeout(() => {
+        this.$router.push({
+          name: "Shanping",
+          query: { id: this.$refs.div[indexs].title }
+        });
+        loading.close();
+      }, 400);
+      console.log( this.$refs.div[indexs].title)
     }
   }
 });

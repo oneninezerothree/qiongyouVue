@@ -20,15 +20,15 @@ export default Vue.extend({
         {
           name: "莫洛哥",
           urls:
-            "https://pic.qyer.com/album/user/1204/31/QEtVRhkGYE4/index/320x180"
+            "/img/assets/o4.jpg"
         },
         {
           name: "毛利秋思",
-          urls: "https://pic.qyer.com/album/18e/5e/1956621/index/320x180"
+          urls: "/img/assets/o5.jpg"
         },
         {
           name: "埃及",
-          urls: "https://pic.qyer.com/album/141/00/1967119/index/320x180"
+          urls: "/img/assets/o6.jpg"
         }
       ]
     };

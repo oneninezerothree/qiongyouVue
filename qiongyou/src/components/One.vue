@@ -1,9 +1,19 @@
 <template>
 
-  <div class="back">
+  <div class="back" @click="go">
     <i class="icon-back"></i>
   </div>
 </template>
+<script>
+export default {
+   methods:{
+    go(){
+      this.$router.push('/');
+    },
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 .back, .back i {
     position: absolute;

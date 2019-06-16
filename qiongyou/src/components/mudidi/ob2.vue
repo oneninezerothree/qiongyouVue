@@ -19,17 +19,17 @@ export default Vue.extend({
       world: [
         {
           name: "法国",
-          urls: "https://pic.qyer.com/album/134/44/1105515/index/320x180"
+          urls: "/img/assets/320x180 (44).jpg"
         },
         {
           name: "西班牙",
           urls:
-            "https://pic.qyer.com/album/user/2584/28/Q0xdRhgPaEg/index/320x180"
+            "/img/assets/o2.jpg"
         },
         {
           name: "意大利",
           urls:
-            "https://pic.qyer.com/album/user/2068/18/Q0lTShsPZUA/index/320x180"
+            "/img/assets/o3.jpg"
         }
       ]
     };

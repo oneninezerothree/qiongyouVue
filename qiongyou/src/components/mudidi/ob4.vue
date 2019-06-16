@@ -20,17 +20,17 @@ export default Vue.extend({
         {
           name: "澳大利亚",
           urls:
-            "https://pic.qyer.com/album/user/2579/37/Q0xSSxkAYU0/index/320x180"
+            "/img/assets/o7.jpg"
         },
         {
           name: "新西兰",
           urls:
-            "https://pic.qyer.com/album/user/2130/73/Q0hWQh0EaU4/index/320x180"
+            "/img/assets/o8.jpg"
         },
         {
           name: "关岛",
           urls:
-            "https://pic.qyer.com/album/user/401/94/RUlUSx4EYQ/index/320x180"
+            "/img/assets/o9.jpg"
         }
       ]
     };
